@@ -166,27 +166,32 @@ i {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 10px; /* adds space between cards */
   margin-top: -16%;
-  margin-left: 19%;
+  margin-left: 0; /* REMOVE excessive left push */
+  justify-content: center; /* center the whole grid */
 }
 
-.glasscard-container {
+
+.glasscard-container, .glasscard-container-1 {
   display: flex;
-  align-items:center; /* Center vertically */
-  background: rgba(255, 255, 255, 0.15); /* Glass effect */
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   padding: 15px;
-  width: 572px;
+  width: 572px; /* smaller width to avoid overflow */
   height: 172px;
   border: 2px solid #7C7C7C;
   border-radius: 12px;
-  margin-left: -20px;
-  margin-top: 43%;
+  margin: 20% auto 0 auto; /* center horizontally */
+  margin-left: 35%;
   animation-name: slideinTopGlasscard;
-  animation-duration:1s;
-  animation-timing-function:ease-in-out;
-  animation-delay:0s;
-  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.glasscard-container-1 {
+  margin-left: 17%; /* remove negative left */
 }
 
 @keyframes slideinTopGlasscard {
@@ -236,8 +241,8 @@ i {
 
 .lists-events {
   margin-left: 18%;
-
   color: #464E2E;
+  margin-top: -6%;
 }
 
 .hr-lists-events {

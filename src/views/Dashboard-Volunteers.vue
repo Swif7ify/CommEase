@@ -60,6 +60,24 @@
     <hr class="hr-input" />
   </div>
 
+  <!-- NOTIFICATION PANEL -->
+<div class="notification-panel" :class="{ open: showNotifications }">
+  <div class="notification-header">
+    <h3>Notifications</h3>
+    <span class="close-btn" @click="toggleNotifications">&times;</span>
+  </div>
+  <div class="notification-list">
+    <div
+      class="notification-item"
+      v-for="(notif, index) in notifications"
+      :key="index"
+    >
+      <h4>{{ notif.message }}</h4>
+      <p class="time">{{ notif.time }}</p>
+    </div>
+  </div>
+</div>
+
   <!-- USER INFO -->
   <div class="container">
     <div class="glasscard-container">
@@ -72,7 +90,7 @@
       </div>
     </div>
 
-    <div class="glasscard-container">
+    <div class="glasscard-container-1">
       <div class="picture-1">
         <img src="/public/gulapa.jpg" alt="shrek sample pic" class="picture-person" />
       </div>
@@ -118,8 +136,9 @@ export default {
       isSidebarOpen: false,
       qrData: 'sample-qr-data',
       notifications: [
-        { message: 'Task Completed', time: '10:00 AM' },
-        { message: 'Event Reminder', time: '9:00 AM' },
+        { message: "You completed the 'Update website content' task.", time: "2 hours ago" },
+        { message: "You completed the 'Clean up drive' task.", time: "3 hours ago" },
+        { message: "You completed the 'Meeting with organizers' task.", time: "5 hours ago" }
       ],
       events: [
         {

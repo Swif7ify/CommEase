@@ -91,7 +91,7 @@
       </div>
     </div>
 
-    <div class="glasscard-container">
+    <div class="glasscard-container-1">
       <div class="picture-1">
         <img src="/public/gulapa.jpg" class="picture-person"/>
       </div>
