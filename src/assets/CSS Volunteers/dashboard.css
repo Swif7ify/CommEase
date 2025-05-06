@@ -291,7 +291,7 @@ i {
   padding: 10px 20px;
   border-radius: 10px;
   color: #E9E5D6;
-  background: linear-gradient(150deg, #41520C, #59692A, #ACB992);
+  background-color: #59692A;
   animation: slideintopEvents .75s ease-in-out;
   animation-timeline: view();
   animation-range: entry 0% cover 25%;
@@ -334,7 +334,7 @@ i {
   width: 75px;
   height: 40px;
   padding-left: 15px;
-  background-color: #59692A;
+  background-color: #41520C;
 }
 
 .button-enter:hover {
