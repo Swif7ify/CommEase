@@ -79,7 +79,7 @@
 </div>
 
   <!-- USER INFO -->
-  <div class="container">
+  <div class="container" :class="{ 'hide-card': !isOpen }"> 
     <div class="glasscard-container">
       <div class="picture-1">
         <img src="/public/gulapa.jpg" alt="shrek sample pic" class="picture-person" />
@@ -124,7 +124,7 @@
   </div>
 </template>
 
-<script>
+<!-- <script>
 export default {
   data() {
     return {
@@ -231,6 +231,20 @@ export default {
     }
   },
 };
+</script> -->
+
+<script setup>
+  import {ref} from 'vue';
+
+  const isOpen = ref(false);
+  const isSidebarOpen = ref(false); 
+  const toggleSidebar = () => {
+    isSidebarOpen.value =!isSidebarOpen.value
+
+    isOpen.value =! isOpen.value
+  }
+
+
 </script>
 
 <style scoped src="/src/assets/CSS Volunteers/dashboard.css"></style>
