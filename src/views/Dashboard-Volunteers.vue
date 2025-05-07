@@ -63,13 +63,15 @@
 			class="search-options-container"
 			:class="{ 'sidebar-collapsed': !isOpen }"
 		>
-			<!--  <div class="dropdown">
-        <button class="dropbtn">Options ▼</button>
-        <div class="dropdown-content">
-          <a>Show My QR Code</a>
-          <a>Calendar</a>
-        </div>
-      </div> -->
+			<div class="dropdown">
+				<button class="dropbtn" @click="toggleDropdown">
+					Options ▼
+				</button>
+				<div class="dropdown-content" :class="{ active: showDropdown }">
+					<a>Show My QR Code</a>
+					<a>Calendar</a>
+				</div>
+			</div>
 			<input
 				v-model="searchQuery"
 				class="input-search-event"
@@ -132,7 +134,7 @@
 	<div class="container-events" :class="{ 'sidebar-collapsed': !isOpen }">
 		<div>
 			<h1 class="lists-events">LISTS OF EVENTS</h1>
-			<!-- <hr class="hr-lists-events" /> -->
+			<hr class="hr-lists-events" />
 		</div>
 
 		<div class="events-grid">
@@ -178,6 +180,7 @@ export default {
 			showNotifications: false,
 			showLogoutModal: false,
 			isSidebarOpen: false,
+			showDropdown: false,
 			isOpen: false, // added from ref conversion
 			qrData: "sample-qr-data",
 			notifications: [
@@ -292,6 +295,9 @@ export default {
 			// Placeholder for logout logic
 			console.log("Logging out...");
 			this.showLogoutModal = false;
+		},
+		toggleDropdown() {
+			this.showDropdown = !this.showDropdown;
 		},
 	},
 };
