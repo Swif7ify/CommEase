@@ -72,4 +72,4 @@ const isFormValid = computed(() => {
 
 </script>
 
-<style src="/src/assets/CSS Files/signup.css"></style>
+<style scoped src="/src/assets/CSS Files/signup.css"></style>

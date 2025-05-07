@@ -168,4 +168,4 @@ export default {
 
 
 
-<style src="/src/assets/CSS Volunteers/Activitylog.css"></style>
+<style scoped src="/src/assets/CSS Volunteers/Activitylog.css"></style>

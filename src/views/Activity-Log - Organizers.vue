@@ -170,4 +170,4 @@ const confirmLogout = () => {
 </script>
 
 
-<style src="/src/assets/CSS Organizers/ActivityLog.css"></style>
+<style scoped src="/src/assets/CSS Organizers/ActivityLog.css"></style>

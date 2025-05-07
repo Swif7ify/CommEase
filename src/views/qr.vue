@@ -67,7 +67,7 @@ const onDetect = (result) => {
   </div>
 </template>
 
-<style>
+<style scoped>
 /* Basic container */
 .container {
   display: flex;
