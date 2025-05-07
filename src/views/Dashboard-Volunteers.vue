@@ -79,6 +79,7 @@
 				placeholder="Search event..."
 			/>
 		</div>
+		<hr class="search-divider" :class="{ 'sidebar-collapsed-for-divider': isOpen }" />
 	</div>
 
 	<!-- NOTIFICATION PANEL -->
